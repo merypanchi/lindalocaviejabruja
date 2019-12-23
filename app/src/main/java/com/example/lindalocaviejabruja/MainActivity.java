@@ -1,5 +1,6 @@
 package com.example.lindalocaviejabruja;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -38,6 +39,30 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Toca el mapa para agregar tu imagen", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+            }
+        });
+        FloatingActionButton feliz = findViewById(R.id.floatingActionButton);
+        feliz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                System.exit(0);
+            }
+        });
+        FloatingActionButton neutral = findViewById(R.id.floatingActionButton2);
+        neutral.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                System.exit(0);
+            }
+        });
+        FloatingActionButton triste = findViewById(R.id.floatingActionButton3);
+        triste.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                System.exit(0);
             }
         });
         ImageView mapa=findViewById(R.id.imageView);
@@ -92,5 +117,16 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @SuppressLint("RestrictedApi")
+    @Override
+    public void onBackPressed() {
+        FloatingActionButton feliz = findViewById(R.id.floatingActionButton);
+        feliz.setVisibility(View.VISIBLE);
+        FloatingActionButton neutral = findViewById(R.id.floatingActionButton2);
+        neutral.setVisibility(View.VISIBLE);
+        FloatingActionButton triste = findViewById(R.id.floatingActionButton3);
+        triste.setVisibility(View.VISIBLE);
     }
 }
