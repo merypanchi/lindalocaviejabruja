@@ -15,6 +15,6 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/plano"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="107dp" />
+        tools:layout_editor_absoluteY="0dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
